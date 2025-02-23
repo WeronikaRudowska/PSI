@@ -1,0 +1,8 @@
+pole_kola=function(r){
+  if (r>0){
+    return(3.14 * r^2)
+  }
+ else return(0)
+}
+pole_kola(2)
+pole_kola(-4)
