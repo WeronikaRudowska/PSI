@@ -1,0 +1,17 @@
+podatek = function(typ, kwota) {
+  if (typ == "liniowy") {
+    podatek = kwota * 0.19
+  } else if (typ == "ogolny") {
+    if (kwota <= 85528) {
+      podatek = kwota * 0.18 - 556
+    } else if (kwota > 85528) {
+      podatek = 14839 + 0.32 * (kwota - 85528)
+    }
+  }
+  return(podatek)
+}
+
+
+podatek("liniowy", 110000)
+podatek("ogolny", 110000)
+podatek("ogolny", 20000)
